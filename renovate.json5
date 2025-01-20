@@ -34,7 +34,8 @@
       ],
       "labels": [
         "dependency upgrade",
-        "line-openapi-update"
+        "line-openapi-update",
+        "bug"
       ],
       "schedule": [
         "after 11pm",
