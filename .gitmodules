@@ -1,0 +1,3 @@
+[submodule "line-bot-sdk-php-653-submodule"]
+	path = line-bot-sdk-php-653-submodule
+	url = git@github.com:Yang-33/line-bot-sdk-php-653-submodule.git
