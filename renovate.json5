@@ -12,7 +12,7 @@
   },
   // 既定で付与したいラベル
   "labels": [
-    "dependency upgrade"
+    "enhancement"
   ],
   "packageRules": [
     {
@@ -29,7 +29,7 @@
     },
     {
       // line-bot-sdk-php-653-submodule のみ夜間実施したい
-      "matchPackageNames": [
+      "matchPackagePatterns": [
         "line-bot-sdk-php-653-submodule"
       ],
       "labels": [
