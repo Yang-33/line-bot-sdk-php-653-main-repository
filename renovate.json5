@@ -1,0 +1,45 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "timezone": "Asia/Tokyo",
+  "ignorePaths": ["docs/"],
+  "automerge": true,
+  "platformAutomerge": true,
+  "git-submodules": {
+    "enabled": true
+  },
+  // 既定で付与したいラベル
+  "labels": [
+    "dependency upgrade"
+  ],
+  "packageRules": [
+    {
+      // guzzlehttp/psr7の更新にも追加ラベルをつけたい
+      // ※ 完全一致の場合はmatchPackageNamesを利用
+      //    正規表現で部分一致させたいならmatchPackagePatternsに書く
+      "matchPackageNames": ["guzzlehttp/psr7"],
+      "labels": [
+        "dependency upgrade",
+        "line-openapi-update"
+      ],
+      // TODO: スケジュールしたい場合はここに
+      // "schedule": ["after 11pm and before 4am"]
+    },
+    {
+      // line-bot-sdk-php-653-submodule のみ夜間実施したい
+      "matchPackageNames": [
+        "line-bot-sdk-php-653-submodule"
+      ],
+      "labels": [
+        "dependency upgrade",
+        "line-openapi-update"
+      ],
+      "schedule": [
+        "after 11pm",
+        "before 4am"
+      ]
+    }
+  ]
+}
